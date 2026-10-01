@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karang Taruna Tunas Muda - Portal Resmi & Sponsorship Hub</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0f172a',
+                            dark: '#0a0f1d',
+                            card: '#1e293b',
+                            gold: '#f59e0b',
+                            emerald: '#10b981',
+                            accent: '#3b82f6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0f1d;
+            color: #f8fafc;
+        }
+
+        /* Glassmorphism styling */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-nav {
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Gradient text utility */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-blue {
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand Name -->
+                <a href="#beranda" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-600 to-emerald-500 p-0.5 shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full bg-slate-900 rounded-[10px] flex items-center justify-center">
+                            <i class="fa-solid fa-hands-holding-circle text-xl text-emerald-400"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold tracking-tight text-white block leading-tight">PELITA</span>
+                        <span class="text-xs font-semibold tracking-wider text-emerald-400 uppercase">Pemuda Lingkungan RT Tiga</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                    <a href="#beranda" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Beranda</a>
+                    <a href="#profil" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Profil</a>
+                    <a href="#proker" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Proker</a>
+                    <a href="#event" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Event</a>
+                    <a href="#sponsor" class="px-3 py-2 rounded-lg text-sm font-medium text-amber-400 hover:text-amber-300 hover:bg-amber-500/10 transition-all">Sponsor</a>
+                    <a href="#kontak" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all">Kontak</a>
+                </nav>
+
+                <!-- CTA Button Desktop -->
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="#sponsor" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Jadi Sponsor</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle Mobile Menu" class="md:hidden p-2.5 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">
+                    <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 backdrop-blur-2xl px-4 pt-3 pb-6 space-y-2">
+            <a href="#beranda" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800">Beranda</a>
+            <a href="#profil" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800">Profil & Pengurus</a>
+            <a href="#proker" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800">Program Kerja</a>
+            <a href="#event" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800">Event Mendatang</a>
+            <a href="#sponsor" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-amber-400 bg-amber-500/10">Sponsorship Hub</a>
+            <a href="#kontak" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-slate-800">Kontak Sekretariat</a>
+            <div class="pt-2">
+                <a href="#sponsor" class="mobile-link w-full py-3 rounded-xl bg-amber-500 text-slate-950 font-bold text-center block shadow-lg shadow-amber-500/20">
+                    <i class="fa-solid fa-handshake mr-2"></i> Ajukan Sponsorship
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <!-- Background Decorative Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <!-- Badge Banner -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs font-semibold text-emerald-400 mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Portal Resmi Karang Taruna Desa Maju Bersama</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6">
+                    Bersama Pemuda, Membangun <span class="text-gradient-gold">Karya & Impact</span> Untuk Masyarakat
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+                    Wadah aspirasi, inovasi, dan aksi nyata generasi muda dalam mengabdi demi kemajuan sosial, ekonomi, budaya, serta pemberdayaan masyarakat lokal.
+                </p>
+
+                <!-- Hero CTAs -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <a href="#proker" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                        <span>Jelajahi Program Kerja</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#sponsor" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-slate-800/90 text-amber-400 font-semibold text-base border border-amber-500/30 hover:border-amber-500/60 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-handshake"></i>
+                        <span>Mitra & Sponsorship</span>
+                    </a>
+                </div>
+
+                <!-- Counter Statistics Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="glass-card p-6 rounded-2xl text-center border-slate-800 hover:border-blue-500/30 transition-colors">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-blue-400 mb-1">120+</div>
+                        <div class="text-xs sm:text-sm font-medium text-slate-400">Pemuda & Pemudi Aktif</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center border-slate-800 hover:border-emerald-500/30 transition-colors">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 mb-1">25+</div>
+                        <div class="text-xs sm:text-sm font-medium text-slate-400">Proker Telah Terlaksana</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center border-slate-800 hover:border-amber-500/30 transition-colors">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-amber-400 mb-1">1.500+</div>
+                        <div class="text-xs sm:text-sm font-medium text-slate-400">Warga Terdampak Positif</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFIL & PENGURUS SECTION -->
+    <section id="profil" class="py-20 relative bg-slate-900/60 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Profil Organisasi</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Visi, Misi & Pengurus Karang Taruna</h3>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">Mengenal struktur organisasi dan landasan gerakan pemuda kami.</p>
+            </div>
+
+            <!-- Visi & Misi Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="glass-card p-8 rounded-2xl border-l-4 border-l-blue-500">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Visi Kami</h4>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Mewujudkan generasi muda Karang Taruna yang berakhlak mulia, mandiri, kreatif, dan berdaya saing tinggi dalam membangun kesejahteraan sosial dan potensi potensi lokal desa.
+                    </p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl border-l-4 border-l-emerald-500">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Misi Utama</h4>
+                    <ul class="space-y-2 text-slate-300 text-sm sm:text-base">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1 text-xs"></i>
+                            <span>Mengembangkan kegiatan kepemudaan berbasis kreativitas dan kewirausahaan.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1 text-xs"></i>
+                            <span>Menjaga semangat gotong royong dan tanggap bencana sosial kemasyarakatan.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-1 text-xs"></i>
+                            <span>Menjalin kemitraan strategis dengan sektor pemerintah maupun swasta.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pengurus Category Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+                <button class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-600 text-white transition-all" data-category="all">
+                    Semua Pengurus
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all" data-category="bph">
+                    BPH Utama
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all" data-category="humas">
+                    Humas & Sponsor
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all" data-category="olahraga">
+                    Pemuda & Olahraga
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold glass-card text-slate-300 hover:text-white transition-all" data-category="baksos">
+                    Sosial & Baksos
+                </button>
+            </div>
+
+            <!-- Grid Card Pengurus -->
+            <div id="pengurusGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="pengurus-card glass-card p-6 rounded-2xl text-center group hover:-translate-y-1 transition-all duration-300" data-category="bph">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full p-1 bg-gradient-to-tr from-blue-500 to-emerald-400 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" alt="Ketua Karang Taruna" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=Pengurus'">
+                    </div>
+                    <h5 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Rizky Pratama, S.T.</h5>
+                    <p class="text-xs font-semibold text-emerald-400 mb-2">Ketua Karang Taruna</p>
+                    <p class="text-xs text-slate-400 italic mb-4">"Mengabdi dengan aksi nyata demi kemajuan pemuda desa."</p>
+                    <div class="flex items-center justify-center gap-3 text-slate-400">
+                        <a href="#" aria-label="Instagram Ketua" class="hover:text-amber-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn Ketua" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pengurus-card glass-card p-6 rounded-2xl text-center group hover:-translate-y-1 transition-all duration-300" data-category="bph">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full p-1 bg-gradient-to-tr from-blue-500 to-emerald-400 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80" alt="Sekretaris" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=Pengurus'">
+                    </div>
+                    <h5 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Anisa Rahmawati</h5>
+                    <p class="text-xs font-semibold text-emerald-400 mb-2">Sekretaris Utama</p>
+                    <p class="text-xs text-slate-400 italic mb-4">"Tertib administrasi untuk transparansi program kerja."</p>
+                    <div class="flex items-center justify-center gap-3 text-slate-400">
+                        <a href="#" aria-label="Instagram Sekretaris" class="hover:text-amber-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pengurus-card glass-card p-6 rounded-2xl text-center group hover:-translate-y-1 transition-all duration-300" data-category="humas">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full p-1 bg-gradient-to-tr from-amber-500 to-emerald-400 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="Humas & Sponsor" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=Pengurus'">
+                    </div>
+                    <h5 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Bima Arya</h5>
+                    <p class="text-xs font-semibold text-amber-400 mb-2">Koor. Humas & Sponsorship</p>
+                    <p class="text-xs text-slate-400 italic mb-4">"Membangun sinergi saling menguntungkan dengan mitra luar."</p>
+                    <div class="flex items-center justify-center gap-3 text-slate-400">
+                        <a href="#" aria-label="WhatsApp Humas" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram Humas" class="hover:text-amber-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="pengurus-card glass-card p-6 rounded-2xl text-center group hover:-translate-y-1 transition-all duration-300" data-category="olahraga">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full p-1 bg-gradient-to-tr from-blue-500 to-emerald-400 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Koor Olahraga" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.src='https://placehold.co/200x200/1e293b/ffffff?text=Pengurus'">
+                    </div>
+                    <h5 class="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">Dito Prasetyo</h5>
+                    <p class="text-xs font-semibold text-emerald-400 mb-2">Koor. Pemuda & Olahraga</p>
+                    <p class="text-xs text-slate-400 italic mb-4">"Kreativitas dan jiwa sportif untuk generasi muda unggul."</p>
+                    <div class="flex items-center justify-center gap-3 text-slate-400">
+                        <a href="#" aria-label="Instagram Koor Olahraga" class="hover:text-amber-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM KERJA SECTION -->
+    <section id="proker" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Rekam Jejak & Rencana</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Program Kerja Karang Taruna</h3>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">Aksi nyata pemuda yang telah terlaksana dan agenda keberlanjutan mendatang.</p>
+            </div>
+
+            <!-- Proker Tab Switching -->
+            <div class="flex justify-center mb-10">
+                <div class="p-1.5 glass-card rounded-2xl inline-flex gap-2 border-slate-800">
+                    <button id="tabTerlaksana" class="proker-tab px-6 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white shadow-md transition-all">
+                        <i class="fa-solid fa-circle-check mr-2"></i>Telah Terlaksana
+                    </button>
+                    <button id="tabMendatang" class="proker-tab px-6 py-2.5 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all">
+                        <i class="fa-solid fa-calendar-days mr-2"></i>Akan Datang
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content: Terlaksana -->
+            <div id="prokerCompletedGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Proker Item 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-blue-500/40 transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?w=600&auto=format&fit=crop&q=80" alt="Kerja Bakti Masal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-emerald-400 border border-slate-700">
+                            Sosial & Lingkungan
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Kerja Bakti Masal & Clean-Up Desa</h4>
+                        <p class="text-xs sm:text-sm text-slate-400 mb-4">Pembersihan sarana umum, selokan warga, serta perapihan taman warga menjelang musim penghujan.</p>
+                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-chart-line mr-1"></i> 400+ Warga Terbantu</span>
+                            <span class="text-slate-500">Selesai (Jan 2026)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proker Item 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-blue-500/40 transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?w=600&auto=format&fit=crop&q=80" alt="Donor Darah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-red-400 border border-slate-700">
+                            Kesehatan
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Donor Darah Kemanusiaan PMI</h4>
+                        <p class="text-xs sm:text-sm text-slate-400 mb-4">Kegiatan donor darah rutin bekerja sama dengan PMI kota untuk membantu ketersediaan stok darah.</p>
+                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-droplet mr-1"></i> 120 Kantong Darah</span>
+                            <span class="text-slate-500">Selesai (Feb 2026)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proker Item 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group hover:border-blue-500/40 transition-all">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&auto=format&fit=crop&q=80" alt="Pesta Rakyat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-amber-400 border border-slate-700">
+                            Seni & Budaya
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">Semarak Pesta Rakyat Kemerdekaan</h4>
+                        <p class="text-xs sm:text-sm text-slate-400 mb-4">Rangkaian lomba tradisional 17-an, panggung seni kebudayaan, serta bazaar UMKM warga lokal.</p>
+                        <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                            <span class="text-emerald-400 font-semibold"><i class="fa-solid fa-users mr-1"></i> 1.000+ Pengunjung</span>
+                            <span class="text-slate-500">Selesai (Agust 2025)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Mendatang (Hidden by default) -->
+            <div id="prokerUpcomingGrid" class="hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-amber-500">
+                    <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold border border-amber-500/20 mb-3 inline-block">Persiapan 80%</span>
+                    <h4 class="text-xl font-bold text-white mb-2">Turnamen Futsal Pemuda Cup 2026</h4>
+                    <p class="text-slate-300 text-sm mb-4">Ajang olahraga kompetitif antar-RT se-desa untuk memupuk kebersamaan dan mengidentifikasi talenta muda.</p>
+                    <div class="flex items-center gap-4 text-xs text-slate-400">
+                        <span><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 28 Oktober 2026</span>
+                        <span><i class="fa-solid fa-location-dot mr-1 text-amber-400"></i> Lapangan Desa</span>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 mb-3 inline-block">Tahap Perencanaan</span>
+                    <h4 class="text-xl font-bold text-white mb-2">Pelatihan Digital Marketing UMKM Desa</h4>
+                    <p class="text-slate-300 text-sm mb-4">Workshop praktis pembuatan konten promosi media sosial dan jualan online untuk pelaku usaha mikro lokal.</p>
+                    <div class="flex items-center gap-4 text-xs text-slate-400">
+                        <span><i class="fa-regular fa-clock mr-1 text-emerald-400"></i> 10 November 2026</span>
+                        <span><i class="fa-solid fa-location-dot mr-1 text-emerald-400"></i> Aula Balai Desa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT MENDATANG SECTION -->
+    <section id="event" class="py-20 relative bg-slate-900/60 border-y border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Agenda Pemuda</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Event & Kegiatan Mendatang</h3>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-3 md:mt-0">Ikuti dan daftarkan diri kamu dalam kegiatan positif generasi muda Karang Taruna.</p>
+            </div>
+
+            <!-- Event Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Event 1 -->
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between border-slate-800 hover:border-emerald-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 text-xs font-bold border border-blue-500/20">Olahraga</span>
+                            <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-fire mr-1"></i>Pendaftaran Dibuka</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Turnamen Futsal Pemuda Cup 2026</h4>
+                        <div class="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-calendar text-emerald-400 w-4"></i><span>28 Oktober 2026</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-emerald-400 w-4"></i><span>08:00 - 17:00 WIB</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-emerald-400 w-4"></i><span>Lapangan Serbaguna Desa</span></div>
+                        </div>
+                    </div>
+                    <button onclick="openRegisterModal('Turnamen Futsal Pemuda Cup 2026')" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                        <span>Daftar Acara Ini</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between border-slate-800 hover:border-emerald-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-xl bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20">Lingkungan</span>
+                            <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-fire mr-1"></i>Pendaftaran Dibuka</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Aksi Hijau: 500 Pohon Untuk Negeri</h4>
+                        <div class="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-calendar text-emerald-400 w-4"></i><span>10 November 2026</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-emerald-400 w-4"></i><span>06:30 WIB - Selesai</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-emerald-400 w-4"></i><span>Area Bantaran Sungai RW 04</span></div>
+                        </div>
+                    </div>
+                    <button onclick="openRegisterModal('Aksi Hijau: 500 Pohon Untuk Negeri')" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
+                        <span>Daftar Acara Ini</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between border-slate-800 hover:border-emerald-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-xl bg-amber-500/10 text-amber-400 text-xs font-bold border border-amber-500/20">Edukasi & UMKM</span>
+                            <span class="text-xs text-slate-400 font-semibold"><i class="fa-solid fa-clock mr-1"></i>Segera Buka</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Workshop Digital Marketing Pemuda</h4>
+                        <div class="space-y-2 text-xs sm:text-sm text-slate-300 mb-6">
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-calendar text-emerald-400 w-4"></i><span>05 Desember 2026</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-emerald-400 w-4"></i><span>13:00 - 16:00 WIB</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-emerald-400 w-4"></i><span>Aula Balai Desa</span></div>
+                        </div>
+                    </div>
+                    <button onclick="openRegisterModal('Workshop Digital Marketing Pemuda')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <span>Daftar Acara Ini</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPONSORSHIP HUB SECTION (SANGAT PENTING) -->
+    <section id="sponsor" class="py-24 relative overflow-hidden">
+        <!-- Background Decorative Glow -->
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header Section -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="px-4 py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold border border-amber-500/20 uppercase tracking-widest inline-block mb-4">
+                    Kemitraan & Promosi Digital
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Sponsorship <span class="text-gradient-gold">Hub Karang Taruna</span>
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Dukung program kepemudaan kami sekaligus promosikan brand/usaha Anda kepada ribuan warga & segmen generasi muda potensial di wilayah kami.
+                </p>
+            </div>
+
+            <!-- Value Proposition for Sponsors -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="glass-card p-6 rounded-2xl border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Target Pasar Pemuda & Keluarga</h4>
+                    <p class="text-xs sm:text-sm text-slate-400">Akses langsung ke demografi pemuda produktif usia 17-35 tahun serta kepala keluarga di wilayah lokal.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Multi-Channel Exposure</h4>
+                    <p class="text-xs sm:text-sm text-slate-400">Promosi terintegrasi via banner offline di acara, feed & story Instagram resmi, serta pencantuman di website portal ini.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-slate-800 hover:border-amber-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-heart-circle-check"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2">Dampak Sosial & CSR</h4>
+                    <p class="text-xs sm:text-sm text-slate-400">Meningkatkan citra positif usaha Anda sebagai brand yang peduli pada aksi sosial dan kemajuan desa.</p>
+                </div>
+            </div>
+
+            <!-- Paket Sponsorship Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 items-stretch">
+                <!-- Paket Bronze -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-slate-800 hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Paket Pendukung</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Bronze Sponsor</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">Rp 1.000.000 <span class="text-xs text-slate-400 font-normal">/ event</span></div>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Logo Sedang di Banner Utama</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Mention MC saat Opening & Closing</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>1x Post Feed Instagram Organisasi</span></li>
+                            <li class="flex items-center gap-2 text-slate-500"><i class="fa-solid fa-xmark"></i><span>Booth Display Produk</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Bronze Sponsor')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition-all">
+                        Pilih Paket Bronze
+                    </button>
+                </div>
+
+                <!-- Paket Gold (Popular Badge) -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-2 border-amber-500 shadow-2xl shadow-amber-500/10 relative transform md:-translate-y-2 bg-slate-900/90">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-extrabold text-xs tracking-wider uppercase shadow-md">
+                        Paling Direkomendasikan
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-2 pt-2">Paket Utama / Eksklusif</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Gold Sponsor</h3>
+                        <div class="text-3xl font-extrabold text-amber-400 mb-6">Rp 5.000.000 <span class="text-xs text-slate-400 font-normal">/ event</span></div>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-200 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i><span>Logo Utama Paling Besar di Banner/Spanduk</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i><span>Booth / Stand Eksklusif di Lokasi Utama</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i><span>Logo pada Jersey / Kaos Panitia</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i><span>Dedicated Feed & Instagram Story Campaign</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i><span>Hak Pembagian Brosur / Voucher Promo</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Gold Sponsor')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-sm transition-all shadow-lg shadow-amber-500/20">
+                        Pilih Paket Gold
+                    </button>
+                </div>
+
+                <!-- Paket Silver -->
+                <div class="glass-card rounded-2xl p-8 flex flex-col justify-between border-slate-800 hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Paket Madya</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Silver Sponsor</h3>
+                        <div class="text-3xl font-extrabold text-white mb-6">Rp 2.500.000 <span class="text-xs text-slate-400 font-normal">/ event</span></div>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Logo Ukuran Besar di Banner/Spanduk</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Ad-lips / Mention Berkala oleh MC</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Tag & Post Story Instagram Resmi</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Space Meja Display Produk</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPackage('Silver Sponsor')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition-all">
+                        Pilih Paket Silver
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form Interactive Simulator Proposal WhatsApp -->
+            <div class="max-w-3xl mx-auto glass-card p-8 rounded-3xl border-slate-800 shadow-2xl">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-2">Form Simulator Pengajuan Sponsor</h3>
+                    <p class="text-xs sm:text-sm text-slate-400">Isi data di bawah ini, pesan otomatis ke WhatsApp Humas Sponsorship kami akan langsung terformat rapi!</p>
+                </div>
+
+                <form id="waSponsorForm" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nama Perusahaan / Usaha</label>
+                            <input type="text" id="sponsorCompany" required placeholder="Contoh: Toko Berkah Jaya" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nama Penanggung Jawab (PIC)</label>
+                            <input type="text" id="sponsorName" required placeholder="Contoh: Bapak Hendra" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nomor WhatsApp</label>
+                            <input type="tel" id="sponsorPhone" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Pilihan Paket Sponsorship</label>
+                            <select id="sponsorPackage" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors">
+                                <option value="Gold Sponsor">Gold Sponsor (Rp 5.000.000)</option>
+                                <option value="Silver Sponsor">Silver Sponsor (Rp 2.500.000)</option>
+                                <option value="Bronze Sponsor">Bronze Sponsor (Rp 1.000.000)</option>
+                                <option value="Custom / Product In-Kind">Donasi Produk / Konsumsi (In-Kind)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1.5">Pesan / Diskusi Tambahan</label>
+                        <textarea id="sponsorNote" rows="3" placeholder="Tuliskan pertanyaan atau penawaran produk khusus di sini..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none transition-colors"></textarea>
+                    </div>
+
+                    <!-- Live WhatsApp Message Preview Box -->
+                    <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs">
+                        <div class="text-slate-400 font-semibold mb-1 flex items-center justify-between">
+                            <span><i class="fa-brands fa-whatsapp text-emerald-400 mr-1"></i> Preview Format Pesan WA:</span>
+                            <span class="text-[10px] text-amber-400">Otomatis Terupdate</span>
+                        </div>
+                        <p id="waPreviewText" class="text-slate-300 font-mono whitespace-pre-wrap italic">
+                            Silakan isi form di atas untuk melihat preview pesan WhatsApp...
+                        </p>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold text-base shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Kirim Proposal Langsung ke WA Humas</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section class="py-20 bg-slate-900/60 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-2">Tanya Jawab</h2>
+                <h3 class="text-3xl font-bold text-white tracking-tight">Pertanyaan Sering Diajukan (FAQ)</h3>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden border-slate-800">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between font-semibold text-white hover:text-amber-400 transition-colors">
+                        <span>Bagaimana cara mengajukan sponsorship jika bentuknya bukan dana tunai?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Kami sangat terbuka untuk kemitraan *In-Kind* (bantuan barang/produk/jasa), seperti penyediaan konsumsi, tenda acara, voucher belanja, atau produk sampel yang dapat dibagikan kepada peserta. Silakan pilih opsi "Custom / In-Kind" pada form simulator sponsorship.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden border-slate-800">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between font-semibold text-white hover:text-amber-400 transition-colors">
+                        <span>Siapa saja yang bisa mendaftar menjadi anggota Karang Taruna?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Seluruh pemuda dan pemudi berusia 13 hingga 45 tahun yang bertempat tinggal di wilayah Kelurahan/Desa Maju Bersama berhak menjadi anggota aktif Karang Taruna.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden border-slate-800">
+                    <button class="faq-btn w-full p-5 text-left flex items-center justify-between font-semibold text-white hover:text-amber-400 transition-colors">
+                        <span>Apakah ada laporan pertanggungjawaban (LPJ) untuk mitra sponsor?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Ya, tentu saja. Maksimal 14 hari kerja setelah acara selesai, tim Humas & Sponsor kami akan mengirimkan LPJ resmi lengkap dengan dokumentasi foto pemasangan logo brand dan bukti penyerahan manfaat.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & FOOTER SECTION -->
+    <section id="kontak" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">Sekretariat</h2>
+                    <h3 class="text-3xl font-bold text-white mb-6">Hubungi Karang Taruna</h3>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                        Punya pertanyaan seputar keanggotaan, kolaborasi sosial, atau ingin bersilaturahmi langsung ke sekretariat kami? Silakan hubungi kami.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4 glass-card p-4 rounded-xl">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white">Alamat Sekretariat</h5>
+                                <p class="text-xs text-slate-400">Gedung Serbaguna RW 04, Jl. Pemuda No. 123, Kel. Maju Bersama</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 glass-card p-4 rounded-xl">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white">WhatsApp Humas</h5>
+                                <p class="text-xs text-slate-400">+62 812-3456-7890 (Fast Response)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 glass-card p-4 rounded-xl">
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-sm font-bold text-white">Email Resmi</h5>
+                                <p class="text-xs text-slate-400">kontak@kartatunasmuda.or.id</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Pesan Cepat -->
+                <div class="glass-card p-8 rounded-3xl border-slate-800">
+                    <h4 class="text-xl font-bold text-white mb-4">Kirim Pesan Cepat</h4>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Nama Lengkap</label>
+                            <input type="text" required placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Email / No HP</label>
+                            <input type="text" required placeholder="Kontak Anda" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Pesan</label>
+                            <textarea rows="4" required placeholder="Tuliskan pesan atau saran Anda..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-blue-500 focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm transition-all shadow-lg shadow-blue-600/20">
+                            Kirim Pesan Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-20 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>© 2026 Karang Taruna Tunas Muda. Hak Cipta Dilindungi Undang-Undang.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" aria-label="Instagram Official" class="hover:text-slate-300"><i class="fa-brands fa-instagram text-lg"></i></a>
+                    <a href="#" aria-label="YouTube Official" class="hover:text-slate-300"><i class="fa-brands fa-youtube text-lg"></i></a>
+                    <a href="#" aria-label="Facebook Official" class="hover:text-slate-300"><i class="fa-brands fa-facebook text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL PENDAFTARAN EVENT -->
+    <div id="eventModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden transition-opacity">
+        <div class="glass-card max-w-md w-full p-6 sm:p-8 rounded-3xl border-slate-700 relative shadow-2xl">
+            <button onclick="closeRegisterModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h4 class="text-xl font-bold text-white mb-1">Form Pendaftaran Warga</h4>
+            <p id="modalEventTitle" class="text-xs font-semibold text-emerald-400 mb-6">Nama Event</p>
+
+            <form id="eventRegisterForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nama Lengkap</label>
+                    <input type="text" required placeholder="Sesuai KTP / Kartu Pelajar" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nomor WhatsApp Active</label>
+                    <input type="tel" required placeholder="081234567890" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Wilayah RT / RW</label>
+                    <input type="text" required placeholder="Contoh: RT 02 / RW 04" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm focus:border-emerald-500 focus:outline-none">
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20">
+                    Konfirmasi Pendaftaran
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initMobileMenu();
+            initPengurusFilter();
+            initProkerTabs();
+            initWaSimulator();
+            initFaqAccordion();
+            initForms();
+        });
+
+        function initMobileMenu() {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const links = document.querySelectorAll('.mobile-link');
+            const icon = document.getElementById('menuIcon');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.className = 'fa-solid fa-bars text-xl';
+                } else {
+                    icon.className = 'fa-solid fa-xmark text-xl';
+                }
+            });
+
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.className = 'fa-solid fa-bars text-xl';
+                });
+            });
+        }
+
+        function initPengurusFilter() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.pengurus-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-blue-600', 'text-white');
+                        b.classList.add('glass-card', 'text-slate-300');
+                    });
+                    btn.classList.add('active', 'bg-blue-600', 'text-white');
+                    btn.classList.remove('glass-card', 'text-slate-300');
+
+                    const cat = btn.getAttribute('data-category');
+                    cards.forEach(card => {
+                        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        }
+
+        function initProkerTabs() {
+            const tabTerlaksana = document.getElementById('tabTerlaksana');
+            const tabMendatang = document.getElementById('tabMendatang');
+            const gridTerlaksana = document.getElementById('prokerCompletedGrid');
+            const gridMendatang = document.getElementById('prokerUpcomingGrid');
+
+            tabTerlaksana.addEventListener('click', () => {
+                tabTerlaksana.className = "proker-tab px-6 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white shadow-md transition-all";
+                tabMendatang.className = "proker-tab px-6 py-2.5 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all";
+                gridTerlaksana.classList.remove('hidden');
+                gridMendatang.classList.add('hidden');
+            });
+
+            tabMendatang.addEventListener('click', () => {
+                tabMendatang.className = "proker-tab px-6 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white shadow-md transition-all";
+                tabTerlaksana.className = "proker-tab px-6 py-2.5 rounded-xl text-sm font-bold text-slate-400 hover:text-white transition-all";
+                gridMendatang.classList.remove('hidden');
+                gridTerlaksana.classList.add('hidden');
+            });
+        }
+
+        function initWaSimulator() {
+            const company = document.getElementById('sponsorCompany');
+            const name = document.getElementById('sponsorName');
+            const phone = document.getElementById('sponsorPhone');
+            const pkg = document.getElementById('sponsorPackage');
+            const note = document.getElementById('sponsorNote');
+            const preview = document.getElementById('waPreviewText');
+            const form = document.getElementById('waSponsorForm');
+
+            function updatePreview() {
+                const text = `Halo Humas Karang Taruna,
+
+Saya *${name.value || '[Nama Anda]'}* dari *${company.value || '[Nama Usaha/Perusahaan]'}* (No WA: ${phone.value || '-'}).
+
+Bermaksud mengajukan minat kerja sama sponsorship paket:
+👉 *${pkg.value}*
+
+Pesan tambahan:
+"${note.value || 'Mohon infokan proposal & mekanisme selanjutnya.'}"
+
+Terima kasih.`;
+                preview.textContent = text;
+                return text;
+            }
+
+            [company, name, phone, pkg, note].forEach(input => {
+                input.addEventListener('input', updatePreview);
+                input.addEventListener('change', updatePreview);
+            });
+
+            updatePreview();
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const text = updatePreview();
+                const encoded = encodeURIComponent(text);
+                const targetNumber = '6281234567890'; // No WA PIC Humas
+                window.open(`https://wa.me/${targetNumber}?text=${encoded}`, '_blank');
+                showToast('Dialihkan ke WhatsApp Humas...', 'success');
+            });
+        }
+
+        function selectPackage(packageName) {
+            const select = document.getElementById('sponsorPackage');
+            select.value = packageName;
+            select.dispatchEvent(new Event('change'));
+            document.getElementById('sponsor').scrollIntoView({ behavior: 'smooth' });
+            showToast(`Paket ${packageName} dipilih! Silakan lengkapi form.`, 'info');
+        }
+
+        function initFaqAccordion() {
+            const faqBtns = document.querySelectorAll('.faq-btn');
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    
+                    answer.classList.toggle('hidden');
+                    if (answer.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        }
+
+        function openRegisterModal(eventTitle) {
+            document.getElementById('modalEventTitle').textContent = `Pendaftaran: ${eventTitle}`;
+            document.getElementById('eventModal').classList.remove('hidden');
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('eventModal').classList.add('hidden');
+        }
+
+        function initForms() {
+            // Register Event submit
+            document.getElementById('eventRegisterForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                closeRegisterModal();
+                showToast('Pendaftaran Anda berhasil dikirim! Panitia akan menghubungi via WA.', 'success');
+                e.target.reset();
+            });
+
+            // Contact Form submit
+            document.getElementById('contactForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Pesan Anda berhasil terkirim ke Sekretariat.', 'success');
+                e.target.reset();
+            });
+        }
+
+        // Custom Toast Notification System
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `pointer-events-auto px-5 py-3 rounded-2xl glass-card text-xs font-semibold text-white shadow-2xl flex items-center gap-3 border transition-all duration-300 transform translate-y-2 opacity-0 ${
+                type === 'success' ? 'border-emerald-500/50 bg-emerald-950/80' : 'border-blue-500/50 bg-slate-900/90'
+            }`;
+            
+            const iconClass = type === 'success' ? 'fa-solid fa-circle-check text-emerald-400' : 'fa-solid fa-circle-info text-blue-400';
+            toast.innerHTML = `<i class="${iconClass} text-base"></i><span>${message}</span>`;
+            
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
